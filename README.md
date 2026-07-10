@@ -58,11 +58,6 @@ Ampliação do modelo anterior para reconhecer, ao mesmo tempo, o fruto e o inse
 - **Arquitetura:** YOLO11m-seg (Medium)
 - 🚀 [Clique aqui para abrir o Notebook do Modelo B (Acai+barbeiro_Rayane.ipynb)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Acai%2Bbarbeiro_Rayane.ipynb)
 
-### 🖼️ Resultados do Treinamento
-
-Todo o material visual (curvas de perda, matriz de confusão e imagens de teste com máscaras) está disponível na pasta:
-
-📁 [resultados](./resultados)
 
 ---
 
