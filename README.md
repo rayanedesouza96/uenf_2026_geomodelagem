@@ -93,8 +93,11 @@ Todo o projeto roda no **Google Colab**, com aceleração por GPU (T4):
    ```
    É necessário configurar previamente o token de acesso à API do Copernicus no arquivo `.cdsapirc`.
 
+   ⚠️ Além disso, o notebook também depende do **Google Earth Engine**, então é preciso ter uma conta/projeto cadastrado e autenticado na plataforma (com o ID do projeto vinculado ao Earth Engine) para que a autenticação seja concluída e os mapas sejam gerados corretamente.
+
 2. **Visão computacional:** os notebooks `Acai_Rayane.ipynb` e `Acai+barbeiro_Rayane.ipynb` já cuidam sozinhos da instalação da biblioteca `ultralytics` e do download das imagens hospedadas no Roboflow — basta rodar as células em sequência.
 
 ## 🗂️ Sobre o Dataset
 
 As imagens anotadas e as respectivas máscaras de segmentação estão hospedadas publicamente no **Roboflow**. Os notebooks da etapa de visão computacional já trazem o identificador do projeto (`açai-2`) configurado, baixando e extraindo o conjunto de dados automaticamente para a pasta de treinamento — garantindo que os experimentos possam ser reproduzidos sem ajustes manuais.
+
