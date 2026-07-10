@@ -21,8 +21,6 @@ Repositório com o desenvolvimento completo de um projeto que une geoprocessamen
 
 Nesta fase foram construídos os mapas sazonais do estado, com destaque para o principal polo produtor de açaí (Igarapé-Miri, Cametá, Abaetetuba e municípios vizinhos), usando a biblioteca **Cartopy**.
 
-### Localização e Cobertura do Solo
-
 
 ### Uso do Solo + Probabilidade de Ocorrência de Açaí
 
