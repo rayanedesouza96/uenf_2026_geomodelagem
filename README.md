@@ -23,6 +23,11 @@ Nesta fase foram construídos os mapas sazonais do estado, com destaque para o p
 
 ### Localização e Cobertura do Solo
 
+<p align="center">
+  <img src="./Regiao_produtora.jpeg" width="45%" alt="Região Produtora"/>
+  <img src="./Mapa_usoecobertura.jpeg" width="45%" alt="Uso e Cobertura da Terra"/>
+</p>
+
 Os dados atmosféricos utilizados vêm da base **Copernicus (ERA5/ERA5-Land)**, referentes a 2024, no horário das 15h. As variáveis abaixo foram mapeadas para as quatro estações do ano:
 
 **Precipitação (mm/dia)**
@@ -53,6 +58,11 @@ Ampliação do modelo anterior para reconhecer, ao mesmo tempo, o fruto e o inse
 - **Arquitetura:** YOLO11m-seg (Medium)
 - 🚀 [Clique aqui para abrir o Notebook do Modelo B (Acai+barbeiro_Rayane.ipynb)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Acai%2Bbarbeiro_Rayane.ipynb)
 
+### 🖼️ Resultados do Treinamento
+
+Todo o material visual (curvas de perda, matriz de confusão e imagens de teste com máscaras) está disponível na pasta:
+
+📁 [resultados](./resultados)
 
 ---
 
@@ -93,7 +103,7 @@ Todo o projeto roda no **Google Colab**, com aceleração por GPU (T4):
    ```
    É necessário configurar previamente o token de acesso à API do Copernicus no arquivo `.cdsapirc`.
 
-   ⚠️ Além disso, o notebook também depende do **Google Earth Engine**, então é preciso ter uma conta/projeto cadastrado e autenticado na plataforma (com o ID do projeto vinculado ao Earth Engine) para que a autenticação seja concluída e os mapas sejam gerados corretamente.
+   ⚠️ **Atenção:** essa etapa (e somente ela) também depende do **Google Earth Engine** — é preciso ter uma conta/projeto cadastrado e autenticado na plataforma (com o ID do projeto vinculado ao Earth Engine) para que a autenticação seja concluída e os mapas sejam gerados corretamente. As etapas de visão computacional (YOLO), abaixo, não utilizam o Earth Engine.
 
 2. **Visão computacional:** os notebooks `Acai_Rayane.ipynb` e `Acai+barbeiro_Rayane.ipynb` já cuidam sozinhos da instalação da biblioteca `ultralytics` e do download das imagens hospedadas no Roboflow — basta rodar as células em sequência.
 
@@ -101,3 +111,7 @@ Todo o projeto roda no **Google Colab**, com aceleração por GPU (T4):
 
 As imagens anotadas e as respectivas máscaras de segmentação estão hospedadas publicamente no **Roboflow**. Os notebooks da etapa de visão computacional já trazem o identificador do projeto (`açai-2`) configurado, baixando e extraindo o conjunto de dados automaticamente para a pasta de treinamento — garantindo que os experimentos possam ser reproduzidos sem ajustes manuais.
 
+Também é possível baixar diretamente os pacotes de imagens já anotadas (formato YOLOv11), utilizados em cada experimento:
+
+- 🟣 **Dataset — Açaí (Modelo A):** [Clique aqui para baixar (teste.v1i.yolov11.zip)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/teste.v1i.yolov11.zip)
+- 🪲 **Dataset — Açaí + Barbeiro (Modelo B):** [Clique aqui para baixar (teste.v5-barbeiro-e-acai.yolov11.zip)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/teste.v5-barbeiro-e-acai.yolov11.zip)
