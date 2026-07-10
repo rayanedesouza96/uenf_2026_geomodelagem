@@ -23,10 +23,6 @@ Nesta fase foram construídos os mapas sazonais do estado, com destaque para o p
 
 ### Localização e Cobertura do Solo
 
-<p align="center">
-  <img src="./Regiao_produtora.jpeg" width="45%" alt="Região Produtora"/>
-  <img src="./Mapa_usoecobertura.jpeg" width="45%" alt="Uso e Cobertura da Terra"/>
-</p>
 
 ### Uso do Solo + Probabilidade de Ocorrência de Açaí
 
