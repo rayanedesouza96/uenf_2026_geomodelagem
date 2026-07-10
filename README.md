@@ -23,11 +23,6 @@ Nesta fase foram construídos os mapas sazonais do estado, com destaque para o p
 
 ### Localização e Cobertura do Solo
 
-<p align="center">
-  <img src="./Regiao_produtora.jpeg" width="45%" alt="Região Produtora"/>
-  <img src="./Mapa_usoecobertura.jpeg" width="45%" alt="Uso e Cobertura da Terra"/>
-</p>
-
 Os dados atmosféricos utilizados vêm da base **Copernicus (ERA5/ERA5-Land)**, referentes a 2024, no horário das 15h. As variáveis abaixo foram mapeadas para as quatro estações do ano:
 
 **Precipitação (mm/dia)**
