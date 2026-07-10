@@ -23,6 +23,21 @@ Nesta fase foram construídos os mapas sazonais do estado, com destaque para o p
 
 ### Localização e Cobertura do Solo
 
+<p align="center">
+  <img src="./Regiao_produtora.jpeg" width="45%" alt="Região Produtora"/>
+  <img src="./Mapa_usoecobertura.jpeg" width="45%" alt="Uso e Cobertura da Terra"/>
+</p>
+
+### Uso do Solo + Probabilidade de Ocorrência de Açaí
+
+Mapa gerado a partir do **Google Earth Engine**, cruzando as classes de uso e cobertura do solo com a probabilidade estimada de ocorrência de açaí na região (destacada em tons de roxo, do "Média" ao "Muito Alta").
+
+<p align="center">
+  <img src="./mapa_combinado_com_legenda.png" width="80%" alt="Uso do Solo e Probabilidade de Açaí"/>
+</p>
+
+> ⚠️ Este é o único mapa da Etapa 1 que depende do Earth Engine. Os mapas climáticos abaixo (precipitação, temperatura, vento e umidade) são gerados com **Cartopy**, a partir dos dados do Copernicus, e não exigem Earth Engine.
+
 Os dados atmosféricos utilizados vêm da base **Copernicus (ERA5/ERA5-Land)**, referentes a 2024, no horário das 15h. As variáveis abaixo foram mapeadas para as quatro estações do ano:
 
 **Precipitação (mm/dia)**
@@ -53,6 +68,19 @@ Ampliação do modelo anterior para reconhecer, ao mesmo tempo, o fruto e o inse
 - **Arquitetura:** YOLO11m-seg (Medium)
 - 🚀 [Clique aqui para abrir o Notebook do Modelo B (Acai+barbeiro_Rayane.ipynb)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Acai%2Bbarbeiro_Rayane.ipynb)
 
+### 🖼️ Resultados do Treinamento
+
+**Modelo A — Açaí:**
+- 🚀 [Treinamento](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Treinamento%20Acai.jpg)
+- 🚀 [Validação](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Validacao%20Acai.jpg)
+- 🚀 [Predição](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Predicao%20Acai.jpeg)
+- 🚀 [Gráfico de Métricas (results.png)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/results%20Acai.png)
+
+**Modelo B — Açaí + Barbeiro:**
+- 🚀 [Treinamento](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Treinamento%20barbeiro%20%2B%20acai.jpg)
+- 🚀 [Validação](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Validacao%20acai%2Bbarbeiro.jpg)
+- 🚀 [Predição](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/Predicao%20barbeiro%20%2B%20acai.jpg)
+- 🚀 [Gráfico de Métricas (results.png)](https://github.com/rayanedesouza96/uenf_2026_geomodelagem/blob/main/results%20acai%2Bbarbeiro.png)
 
 ---
 
@@ -93,7 +121,7 @@ Todo o projeto roda no **Google Colab**, com aceleração por GPU (T4):
    ```
    É necessário configurar previamente o token de acesso à API do Copernicus no arquivo `.cdsapirc`.
 
-   ⚠️ **Atenção:** essa etapa (e somente ela) também depende do **Google Earth Engine** — é preciso ter uma conta/projeto cadastrado e autenticado na plataforma (com o ID do projeto vinculado ao Earth Engine) para que a autenticação seja concluída e os mapas sejam gerados corretamente. As etapas de visão computacional (YOLO), abaixo, não utilizam o Earth Engine.
+   ⚠️ **Atenção:** o notebook também gera o mapa de uso do solo cruzado com a probabilidade de ocorrência de açaí, e essa parte específica depende do **Google Earth Engine** — é preciso ter uma conta/projeto cadastrado e autenticado na plataforma (com o ID do projeto vinculado ao Earth Engine) para que a autenticação seja concluída. Os mapas climáticos sazonais (precipitação, temperatura, vento, umidade) usam Cartopy/Copernicus e não dependem do Earth Engine.
 
 2. **Visão computacional:** os notebooks `Acai_Rayane.ipynb` e `Acai+barbeiro_Rayane.ipynb` já cuidam sozinhos da instalação da biblioteca `ultralytics` e do download das imagens hospedadas no Roboflow — basta rodar as células em sequência.
 
